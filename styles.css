@@ -178,45 +178,42 @@ h4 { font-size: 1.2rem; }
   width: 100%;
 }
 
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #c9a84c;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 2px;
+  margin-left: auto;
+}
+
 @media (max-width: 768px) {
   .nav-logo img {
     max-height: 45px;
   }
 
-  .nav-logo-tagline {
-    display: none;
+  .mobile-menu-btn {
+    display: block;
   }
 
   .nav-links {
     display: none;
   }
 
-  .menu-btn {
+  .nav-links.active {
     display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #0a0a0a;
+    padding: 20px;
+    gap: 20px;
   }
-}
-
-.menu-btn {
-  display: none;
-  align-items: center;
-  gap: 6px;
-  margin-left: auto;
-  background: none;
-  border: 1px solid var(--gold);
-  border-radius: 3px;
-  color: var(--gold);
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  cursor: pointer;
-  padding: 5px 10px;
-  transition: var(--transition);
-}
-
-.menu-btn:hover {
-  background: rgba(201, 168, 76, 0.1);
 }
 
 .mobile-menu {
