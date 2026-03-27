@@ -178,6 +178,24 @@ h4 { font-size: 1.2rem; }
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .nav-logo img {
+    max-height: 45px;
+  }
+
+  .nav-logo-tagline {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
