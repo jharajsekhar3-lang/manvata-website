@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Films — Manvata Consultants Pvt. Ltd.</title>
+  <meta name="description" content="Explore the cinematic productions of Manvata Consultants — from acclaimed Bengali and Hindi feature films to upcoming releases." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .films-hero {
+      padding-top: calc(var(--nav-height) + 5rem);
+      padding-bottom: 5rem;
+      padding-left: 5%;
+      padding-right: 5%;
+      text-align: center;
+      position: relative;
+      background: linear-gradient(to bottom, rgba(201,168,76,0.05) 0%, transparent 100%);
+    }
+    .films-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .films-hero h1, .films-hero p, .films-hero span {
+      position: relative;
+    }
+
+    /* Raanikaahini placeholder card */
+    .raani-placeholder {
+      background: linear-gradient(160deg, #0d0d00 0%, #1a1200 40%, #0d0a00 100%);
+      border: 1px solid rgba(201,168,76,0.2);
+      aspect-ratio: 2/3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .raani-placeholder::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 60%);
+      animation: rotate 10s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .raani-placeholder .raani-icon {
+      font-size: 2.5rem;
+      position: relative;
+    }
+
+    .raani-placeholder .raani-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--gold);
+      font-style: italic;
+      position: relative;
+      line-height: 1.3;
+    }
+
+    .raani-placeholder .raani-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .raani-corner {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-color: var(--gold);
+      border-style: solid;
+      opacity: 0.4;
+    }
+    .raani-corner.tl { top: 12px; left: 12px; border-width: 1px 0 0 1px; }
+    .raani-corner.tr { top: 12px; right: 12px; border-width: 1px 1px 0 0; }
+    .raani-corner.bl { bottom: 12px; left: 12px; border-width: 0 0 1px 1px; }
+    .raani-corner.br { bottom: 12px; right: 12px; border-width: 0 1px 1px 0; }
+
+    .film-description {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.65;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="Manvata.jpg" alt="Manvata Consultants Logo" />
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Manvata</span>
+        <span class="nav-logo-tagline">Bringing Stories to Life</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="films.html">Films</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="films.html">Films</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <div class="films-hero">
+      <span class="section-label reveal">Cinema &amp; Storytelling</span>
+      <h1 class="reveal">Our <span class="gold-text">Productions</span></h1>
+      <div class="gold-line reveal"></div>
+      <p class="reveal" style="color: var(--text-muted); max-width: 520px; margin: 0 auto; font-size: 1rem;">
+        From powerful Bengali dramas to gripping Hindi thrillers — stories that matter, crafted with cinematic artistry.
+      </p>
+    </div>
+
+    <!-- COMPLETED FILMS -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="section-inner">
+        <p class="subsection-title reveal">Completed Films</p>
+        <div class="films-grid">
+
+          <!-- Haati Haati Paa Paa -->
+          <div class="film-card reveal reveal-delay-1">
+            <div class="film-poster">
+              <img src="Haati Haati Pa Pa.jpg" alt="Haati Haati Paa Paa" loading="lazy" />
+              <div class="film-overlay">
+                <p class="film-overlay-text">A heartwarming Bengali feature film that touches the soul with its emotional storytelling and cultural depth.</p>
+              </div>
+            </div>
+            <div class="film-info">
+              <span class="film-badge badge-language">Bengali Feature Film</span>
+              <h3>Haati Haati Paa Paa</h3>
+              <p class="film-description">A heartwarming Bengali feature film that touches the soul with its emotional storytelling and cultural depth.</p>
+            </div>
+          </div>
+
+          <!-- The Darling Wife -->
+          <div class="film-card reveal reveal-delay-2">
+            <div class="film-poster">
+              <img src="The Darling Wife.jpg" alt="The Darling Wife" loading="lazy" />
+              <div class="film-overlay">
+                <p class="film-overlay-text">A gripping Hindi thriller that keeps audiences on the edge with its dark and suspenseful narrative.</p>
+              </div>
+            </div>
+            <div class="film-info">
+              <span class="film-badge badge-language">Hindi Feature Film</span>
+              <h3>The Darling Wife</h3>
+              <p class="film-description">A gripping Hindi thriller that keeps audiences on the edge with its dark and suspenseful narrative.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING PRODUCTIONS -->
+    <section class="section" style="background: var(--bg-secondary); padding-top: 3rem;">
+      <div class="section-inner">
+        <p class="subsection-title reveal">Upcoming Productions</p>
+        <div class="films-grid">
+
+          <!-- Meghla -->
+          <div class="film-card reveal reveal-delay-1">
+            <div class="film-poster">
+              <img src="Meghla.jpg" alt="Meghla" loading="lazy" />
+              <div class="film-overlay">
+                <p class="film-overlay-text">An epic Bengali cinematic experience with breathtaking visuals and a powerful story.</p>
+              </div>
+            </div>
+            <div class="film-info">
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                <span class="film-badge badge-coming-soon">Coming Soon</span>
+                <span class="film-badge badge-language">Bengali</span>
+              </div>
+              <h3>Meghla</h3>
+              <p class="film-description">An epic Bengali cinematic experience with breathtaking visuals and a powerful story.</p>
+            </div>
+          </div>
+
+          <!-- Raanikaahini -->
+          <div class="film-card reveal reveal-delay-2">
+            <div class="film-poster">
+              <div class="raani-placeholder">
+                <div class="raani-corner tl"></div>
+                <div class="raani-corner tr"></div>
+                <div class="raani-corner bl"></div>
+                <div class="raani-corner br"></div>
+                <span class="raani-icon">⚔️</span>
+                <span class="raani-title">Raanikaahini</span>
+                <span class="raani-subtitle">India's Forgotten Freedom Fighter Spy</span>
+              </div>
+            </div>
+            <div class="film-info">
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                <span class="film-badge badge-coming-soon">Coming Soon</span>
+                <span class="film-badge badge-language">Feature Film</span>
+              </div>
+              <h3>Raanikaahini</h3>
+              <p class="film-description">The extraordinary untold story of an unsung heroine and her pivotal role in India's freedom struggle. A tale of bravery, sacrifice, and lasting impact.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RAANIKAAHINI SPOTLIGHT -->
+    <section class="section">
+      <div class="section-inner">
+        <div style="background: linear-gradient(135deg, #0d0d00 0%, #111000 50%, #0d0a00 100%); border: 1px solid rgba(201,168,76,0.25); border-radius: 4px; padding: 4rem 3rem; text-align: center; position: relative; overflow: hidden;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(201,168,76,0.06) 0%, transparent 70%);"></div>
+          <div style="position: relative;">
+            <span class="section-label reveal">In Development</span>
+            <h2 class="reveal" style="margin-bottom: 1rem;"><span class="gold-text">Raanikaahini</span></h2>
+            <p style="font-family: var(--font-serif); font-style: italic; color: var(--gold); font-size: 1.1rem; margin-bottom: 1.5rem;" class="reveal">India's Forgotten Freedom Fighter Spy</p>
+            <div class="gold-line reveal"></div>
+            <p style="color: var(--text-light); max-width: 640px; margin: 1.5rem auto 2rem; line-height: 1.85; font-size: 0.97rem;" class="reveal">
+              The extraordinary untold story of an unsung heroine and her pivotal role in India's freedom struggle.
+              A tale of bravery, sacrifice, and lasting impact — this film promises to be one of the most significant
+              historical narratives to emerge from Indian cinema.
+            </p>
+            <a href="contact.html" class="btn btn-outline reveal">Enquire About Sponsorship</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="section-inner">
+        <span class="section-label reveal">Collaborate</span>
+        <h2 class="reveal">Interested in Our <span class="gold-text">Productions?</span></h2>
+        <p class="reveal">Explore sponsorship opportunities or learn more about partnering with Manvata Consultants.</p>
+        <a href="contact.html" class="btn btn-gold reveal">Contact Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="Manvata.jpg" alt="Manvata Consultants" class="footer-logo" />
+        <p>A film and audio-visual production company dedicated to creating socially relevant, meaningful, and culturally rooted stories since 1992.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">&#x1F4F7;</a>
+          <a href="#" class="social-link" aria-label="YouTube">&#x25B6;</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="films.html">Our Films</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Productions</h4>
+        <ul>
+          <li><a href="films.html">Haati Haati Paa Paa</a></li>
+          <li><a href="films.html">The Darling Wife</a></li>
+          <li><a href="films.html">Meghla</a></li>
+          <li><a href="films.html">Raanikaahini</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="contact-line">
+          <span>&#x1F4CD;</span>
+          <span>10/3, Rani Shankari Lane, 1st Floor, Flat No. 1A, Kolkata, WB 700026</span>
+        </div>
+        <div class="contact-line">
+          <span>&#x1F4DE;</span>
+          <span>8551076262</span>
+        </div>
+        <div class="contact-line">
+          <span>&#x2709;</span>
+          <span>manvata1992@gmail.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Manvata Consultants Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
