@@ -37,6 +37,84 @@
       margin: 0 auto;
       position: relative;
     }
+
+    /* ── TEAM SECTION ── */
+    .team-section {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .team-card {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      background: #111111;
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+      transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+    }
+    .team-card:hover {
+      box-shadow: 0 8px 40px rgba(201,168,76,0.12);
+      border-color: rgba(201,168,76,0.4);
+      transform: translateY(-3px);
+    }
+    .team-card-reverse {
+      flex-direction: row-reverse;
+    }
+    .team-photo-wrap {
+      flex: 0 0 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .team-photo {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid rgba(201,168,76,0.35);
+      display: block;
+    }
+    .team-bio {
+      flex: 1;
+    }
+    .team-role {
+      color: var(--gold);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin: 0 0 0.4rem;
+    }
+    .team-name {
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 0 0 1rem;
+      line-height: 1.2;
+    }
+    .team-text {
+      color: rgba(255,255,255,0.82);
+      font-size: 0.92rem;
+      line-height: 1.75;
+      margin: 0 0 0.85rem;
+    }
+    .team-text:last-child { margin-bottom: 0; }
+
+    @media (max-width: 768px) {
+      .team-card,
+      .team-card-reverse {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.75rem;
+        text-align: center;
+      }
+      .team-photo-wrap { flex: none; }
+      .team-photo { width: 150px; height: 150px; }
+      .team-name { font-size: 1.35rem; }
+    }
   </style>
 </head>
 <body>
@@ -112,6 +190,44 @@
             <div class="story-image-frame"></div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- MEET OUR TEAM -->
+    <section class="section team-section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label reveal">The People Behind Manvata</span>
+          <h2 class="reveal">Meet Our <span class="gold-text">Team</span></h2>
+          <div class="gold-line reveal"></div>
+        </div>
+
+        <!-- Director Card -->
+        <div class="team-card reveal">
+          <div class="team-photo-wrap">
+            <img src="director.png" alt="Arnab K Middya — Director" class="team-photo" />
+          </div>
+          <div class="team-bio">
+            <p class="team-role">Director</p>
+            <h3 class="team-name">Arnab K Middya</h3>
+            <p class="team-text">Arnab K Middya is a filmmaker by profession who has directed the critically acclaimed feature film <em>Andarkahini</em>, which was screened at 53 National and International film festivals and received 39 awards in various categories from renowned film festivals. His last theatrical released feature film was <em>Sedin Kuyasha Chilo</em> which was successfully screened at theatres for more than 75 days. He is currently working on two feature films <em>Meghla</em> and <em>Haati Haati Paa Paa</em>.</p>
+            <p class="team-text">Before his filmmaking career, he was associated with the National Film Development Corporation Limited (NFDC) where he worked on a prestigious campaign for promotion of West Bengal Tourism featuring Shahrukh Khan. He has handled clients like Coal India, Indian Oil, Ministry of Home Affairs, Ministry of Tourism (Govt. of India) and has been associated with marketing and distribution of feature films like <em>Bhaag Milkha Bhaag</em>, <em>LunchBox</em>, <em>Manjhi</em>, <em>Qissa</em>, <em>Tasher Desh</em> and many more.</p>
+          </div>
+        </div>
+
+        <!-- Producer Card -->
+        <div class="team-card team-card-reverse reveal">
+          <div class="team-photo-wrap">
+            <img src="producer.png" alt="Mr. Rajesh Gautamkumar Jha — Producer and Director" class="team-photo" />
+          </div>
+          <div class="team-bio">
+            <p class="team-role">Producer &amp; Director</p>
+            <h3 class="team-name">Mr. Rajesh Gautamkumar Jha</h3>
+            <p class="team-text">Manvata Consultants Pvt. Ltd. is a Film and audio-visual production company committed to produce socially relevant feature films under the visionary leadership of Mr. Rajesh Gautamkumar Jha. <em>Haati Haati Paa Paa</em> (Bengali), <em>Meghla</em> (Bengali) and <em>The Darling Wife</em> (Hindi) are feature films produced by team Manvata till date.</p>
+            <p class="team-text">Apart from that they are handling clients like Nuvoco Concreto Cement, JBG Hexa TMT, Shyam SEL TMT and many more for whom they are producing creatives as well as managing BTL activities.</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
