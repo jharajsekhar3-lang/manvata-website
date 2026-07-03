@@ -31,73 +31,6 @@
       position: relative;
     }
 
-    /* Raanikaahini placeholder card */
-    .raani-placeholder {
-      background: linear-gradient(160deg, #0d0d00 0%, #1a1200 40%, #0d0a00 100%);
-      border: 1px solid rgba(201,168,76,0.2);
-      aspect-ratio: 2/3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .raani-placeholder::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 60%);
-      animation: rotate 10s linear infinite;
-    }
-
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .raani-placeholder .raani-icon {
-      font-size: 2.5rem;
-      position: relative;
-    }
-
-    .raani-placeholder .raani-title {
-      font-family: var(--font-serif);
-      font-size: 1.6rem;
-      color: var(--gold);
-      font-style: italic;
-      position: relative;
-      line-height: 1.3;
-    }
-
-    .raani-placeholder .raani-subtitle {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      position: relative;
-    }
-
-    .raani-corner {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      border-color: var(--gold);
-      border-style: solid;
-      opacity: 0.4;
-    }
-    .raani-corner.tl { top: 12px; left: 12px; border-width: 1px 0 0 1px; }
-    .raani-corner.tr { top: 12px; right: 12px; border-width: 1px 1px 0 0; }
-    .raani-corner.bl { bottom: 12px; left: 12px; border-width: 0 0 1px 1px; }
-    .raani-corner.br { bottom: 12px; right: 12px; border-width: 0 1px 1px 0; }
-
     .film-description {
       color: var(--text-muted);
       font-size: 0.85rem;
@@ -192,7 +125,7 @@
     <section class="section" style="background: var(--bg-secondary); padding-top: 3rem;">
       <div class="section-inner">
         <p class="subsection-title reveal">Upcoming Productions</p>
-        <div class="films-grid">
+        <div class="films-grid" style="max-width: 320px; margin: 0 auto;">
 
           <!-- Meghla -->
           <div class="film-card reveal reveal-delay-1">
@@ -212,42 +145,6 @@
             </div>
           </div>
 
-          <!-- Raanikaahini -->
-          <div class="film-card reveal reveal-delay-2">
-            <div class="film-poster" style="background:#1a1a1a;">
-              <img src="raanikaahini.png" alt="Raanikaahini" style="width:100%; height:100%; object-fit:cover;" />
-            </div>
-            <div class="film-info">
-              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                <span class="film-badge badge-coming-soon">Coming Soon</span>
-                <span class="film-badge badge-language">Feature Film</span>
-              </div>
-              <h3>Raanikaahini</h3>
-              <p class="film-description">The extraordinary untold story of an unsung heroine and her pivotal role in India's freedom struggle. A tale of bravery, sacrifice, and lasting impact.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- RAANIKAAHINI SPOTLIGHT -->
-    <section class="section">
-      <div class="section-inner">
-        <div style="background: linear-gradient(135deg, #0d0d00 0%, #111000 50%, #0d0a00 100%); border: 1px solid rgba(201,168,76,0.25); border-radius: 4px; padding: 4rem 3rem; text-align: center; position: relative; overflow: hidden;">
-          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(201,168,76,0.06) 0%, transparent 70%);"></div>
-          <div style="position: relative;">
-            <span class="section-label reveal">In Development</span>
-            <h2 class="reveal" style="margin-bottom: 1rem;"><span class="gold-text">Raanikaahini</span></h2>
-            <p style="font-family: var(--font-serif); font-style: italic; color: var(--gold); font-size: 1.1rem; margin-bottom: 1.5rem;" class="reveal">India's Forgotten Freedom Fighter Spy</p>
-            <div class="gold-line reveal"></div>
-            <p style="color: var(--text-light); max-width: 640px; margin: 1.5rem auto 2rem; line-height: 1.85; font-size: 0.97rem;" class="reveal">
-              The extraordinary untold story of an unsung heroine and her pivotal role in India's freedom struggle.
-              A tale of bravery, sacrifice, and lasting impact — this film promises to be one of the most significant
-              historical narratives to emerge from Indian cinema.
-            </p>
-            <a href="contact.html" class="btn btn-outline reveal">Enquire About Sponsorship</a>
-          </div>
         </div>
       </div>
     </section>
@@ -293,7 +190,6 @@
           <li><a href="films.html">Haati Haati Paa Paa</a></li>
           <li><a href="films.html">The Darling Wife</a></li>
           <li><a href="films.html">Meghla</a></li>
-          <li><a href="films.html">Raanikaahini</a></li>
         </ul>
       </div>
       <div class="footer-col">
